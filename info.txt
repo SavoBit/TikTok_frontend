@@ -1,0 +1,14 @@
+Frontend
+    Raact.js
+    Firebase Hosting
+    Material UI
+    Flexbox
+    3rd Party Ticker
+    Scroll Snap
+
+Backend
+    Node.js
+    Express.js Server
+    Mongodb
+    Hosting On Heroku
+    Mongoose
