@@ -1,5 +1,28 @@
-*{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+@import './Vars.scss';
+
+html{
+	scroll-snap-type:y mandatory;
+}
+
+.app{
+	height: 100vh;
+	background-color: #000000de;
+	display: grid;
+	place-items:center;
+
+	.app__videos{
+		position: $Rel;
+		height: 85vh;
+		border-radius: 20px;
+		width: 100%;
+		max-width: 90%;
+		overflow: scroll;
+		scroll-snap-type:y mandatory;
+		-ms-overflow-style:none; /*IE and Edge*/
+		scrollbar-width:none; /*IE and Edge*/
+
+		&::-webkit-scrollbar{
+			display: none;
+		}
+	}
 }

@@ -1,0 +1,16 @@
+@import '../../Vars.scss';
+
+.video{
+	position: $Rel;
+	background-color: $Wh;
+	width: 100%;
+	height: 100%;
+	scroll-snap-align:start;
+	cursor: pointer;
+
+	.video__player{
+		object-fit: fill;
+		height: 101%;
+		width: 101%;
+	}
+}

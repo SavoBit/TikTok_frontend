@@ -1,0 +1,12 @@
+@import '../../../Vars.scss';
+
+.vedioSidbar{
+	position: $Aps;
+	top: 5%;
+	right: 20px;
+	color: $Wh;
+	.vedioSidbar__button{
+		padding:10px;
+		text-align: center;
+	}
+}

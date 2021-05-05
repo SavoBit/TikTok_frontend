@@ -1,0 +1,52 @@
+@import '../../../Vars.scss';
+
+.vedioFooter{
+	position: $Rel;
+	color: $Wh;
+	bottom: 150px;
+	margin-left: 40px;
+	display: flex;
+	// font-size: 4rem;
+
+	.vedioFooter__text{
+		flex:1;
+		color:#fcfff2;
+		& > h3,
+		& > p{
+			padding-bottom: 20px;		
+		}
+
+		.vedioFooter__ticker{
+			& > .ticker{
+				margin-left: 30px;
+				width: 60%;
+			}
+
+			.vedioFooter__icon{
+				position: $Aps;
+			}
+
+			h1{
+				padding-top: 7px;
+			}
+		}
+	}
+
+	.vedioFooter__record{
+		animation: spinRec infinite 5s linear;
+		height: 50px;
+		filter: invert(1);
+		position: $Aps;
+		bottom: 0;
+		right: 20px;
+	}
+}
+
+@keyframes spinRec{
+	from{
+		transform: rotate(0deg);
+	}
+	to{
+		transform: rotate(360deg);	
+	}
+}
