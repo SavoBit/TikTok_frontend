@@ -1,51 +1,30 @@
-import React from 'react';
+import React, {useEffect , useState} from 'react';
 import './App.scss';
 import Video from './components/Videos/Video'
+import axios from './axios'
 
 const App = () => {
  
-  const details = [
-              {
-                id:1,
-                url:'./Vedios/irto.mp4',
-                poster:"irto.jpg",
-                channel:"ErtugrulGhazi",
-                desc:"This Is Tiktok Clone Build By MERN Stack",
-                song:"the Headline of element",
-                likes:111,
-                shares:222,
-                messages:333
-              },
-              {
-                id:2,
-                url:'./Vedios/osm.mp4',
-                poster:"osm.jpg",
-                channel:"OsmanGazi",
-                desc:"This Is Tiktok Clone Build By MERN Stack",
-                song:"the Headline of element",
-                likes:100,
-                shares:200,
-                messages:300,
-              },
-              {
-                id:3,
-                url:'./Vedios/sult.mp4',
-                poster:"sult.png",
-                channel:"SultanAbdulHamid",
-                desc:"This Is Tiktok Clone Build By MERN Stack",
-                song:"the Headline of element",
-                likes:100,
-                shares:50,
-                messages:90,
-              },
-    ]
+  const [Videos , setVideos] = useState([])
+
+
+  useEffect(() => {
+    async function fetchPosts(){
+        const res = await axios.get('v2/posts')
+        setVideos(res.data)
+        return res;
+    }
+
+    fetchPosts()
+
+  }, [])
 
   return (
   	// BEM naming convention
     <div className="app">
     	{/*App Container*/}
       <div className="app__videos">
-        {details.map((item) => (
+        {Videos.map((item) => (
             <Video
                 key={item.id}
                 url={item.url}
@@ -60,12 +39,6 @@ const App = () => {
           ))}
 
       </div>
-    		{/*<Videos />*/}
-    		{/*<Video />*/}
-    		{/*<Video />*/}
-    		{/*<Video />*/}
-    		{/*<Video />*/}
-    		{/*<Video />*/}
     </div>
   );
 }

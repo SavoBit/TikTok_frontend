@@ -4,13 +4,13 @@
 	position: $Rel;
 	background-color: $Wh;
 	width: 100%;
-	height: 100%;
+	height: 101%;
 	scroll-snap-align:start;
 	cursor: pointer;
 
 	.video__player{
 		object-fit: fill;
-		height: 101%;
+		height: 100%;
 		width: 101%;
 	}
 }
